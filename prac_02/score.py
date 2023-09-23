@@ -1,15 +1,32 @@
 """
 CP1404/CP5632 - Practical
-Broken program to determine score status
+Fixed program to determine score result using function
 """
 
-score = float(input("Enter score: "))
+import random
 
-if score < 0 or score > 100:
-    print("Invalid score")
-elif score >= 90:
-    print("Excellent")
-elif score >= 50:
-    print("Pass")
-else:
-    print("Bad")
+
+def main():
+    """Program to get a user's numeric score and display its result."""
+    score = float(input("Enter score: "))
+    result = determine_user_result(score)
+    print(f"Your result is {result}")
+    random_score = random.randint(0, 100)
+    result = determine_user_result(random_score)
+    print(f"Your random score is {random_score} and your result is {result}")
+
+
+def determine_user_result(score):
+    """Determine the result of user's score."""
+    if score < 0 or score > 100:
+        result = "Invalid score"
+    elif score >= 90:
+        result = "Excellent"
+    elif score >= 50:
+        result = "Pass"
+    else:
+        result = "Bad"
+    return result
+
+
+main()
