@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical
-Fill in the TODOs to complete the task
+ValueError exception program.
 """
 
 is_finished = False
