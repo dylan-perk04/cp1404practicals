@@ -1,3 +1,8 @@
+"""
+CP1404 Practical
+Program to generate quick picks in lottery
+"""
+
 import random
 
 NUMBERS_PER_QUICK_PICK = 6
