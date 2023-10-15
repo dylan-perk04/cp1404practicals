@@ -1,6 +1,8 @@
 """
 CP1404 Practical
 Program to read, process and display Wimbledon data
+Estimated: 50 minutes
+Actual: 47 minutes
 """
 
 FILENAME = "wimbledon.csv"

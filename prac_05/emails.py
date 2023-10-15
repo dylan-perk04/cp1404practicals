@@ -1,6 +1,8 @@
 """
 CP1404 Practical
 Program to display expected name from an email using a dictionary
+Estimate: 35 minutes
+Actual: 42 minutes
 """
 
 
