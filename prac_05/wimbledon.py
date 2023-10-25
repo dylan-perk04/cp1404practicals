@@ -13,8 +13,8 @@ CHAMPION_INDEX = 2
 def main():
     """Read csv file and print details about Wimbledon champions and countries."""
     records = get_records(FILENAME)
-    champion_to_wins, countries = process_records(records)
-    display_results(champion_to_wins, countries)
+    champion_to_win, countries = process_records(records)
+    display_results(champion_to_win, countries)
 
 
 def get_records(filename):
@@ -30,16 +30,16 @@ def get_records(filename):
 
 def process_records(records):
     """Create dictionary of champions and a set of countries from records using the list of lists."""
-    champion_to_wins = {}
+    champion_to_win = {}
     countries = set()
 
     for record in records:
         countries.add(record[COUNTRY_INDEX])
         try:
-            champion_to_wins[record[CHAMPION_INDEX]] += 1
+            champion_to_win[record[CHAMPION_INDEX]] += 1
         except KeyError:
-            champion_to_wins[record[CHAMPION_INDEX]] = 1
-    return champion_to_wins, countries
+            champion_to_win[record[CHAMPION_INDEX]] = 1
+    return champion_to_win, countries
 
 
 def display_results(champion_to_wins, countries):

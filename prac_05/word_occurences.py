@@ -6,8 +6,8 @@ Actual: 40 minutes
 """
 word_to_count = {}
 
-user_string = input("Text: ")
-words = user_string.split()
+text = input("Text: ")
+words = text.split()
 
 for word in words:
     word_to_count[word] = word_to_count.get(word, 0) + 1
