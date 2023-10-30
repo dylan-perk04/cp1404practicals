@@ -1,4 +1,4 @@
-"""CP1404/CP5632 Practical - Car class example."""
+"""CP1404 Practical - Car class example."""
 
 
 class Car:
@@ -14,6 +14,7 @@ class Car:
         self.name = name
 
     def __str__(self):
+        """Return a string representation of a car instance"""
         return f"{self.name}, fuel={self.fuel}, odometer={self._odometer}"
 
     def add_fuel(self, amount):
