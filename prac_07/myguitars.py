@@ -32,9 +32,9 @@ def load_file(guitars):
         for line in out_file:
             parts = line.strip().split(',')
             name = parts[NAME_INDEX]
-            year = int(parts[YEAR_INDEX])
-            cost = float(parts[YEAR_INDEX])
-            guitar_to_add = Guitar(name, year, cost)
+            year = parts[YEAR_INDEX]
+            cost = parts[YEAR_INDEX]
+            guitar_to_add = Guitar(name, int(year), float(cost))
             guitars.append(guitar_to_add)
 
 
