@@ -1,4 +1,4 @@
-"""CP1404 Practical - Car class example.
+"""CP1404 Practical - Guitar Class code
 Estimation: 15 minutes
 Actual: 12 minutes
 """

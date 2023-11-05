@@ -1,3 +1,8 @@
+"""
+CP1404 Practicql
+Code to run Guitar Class
+"""
+
 from guitar import Guitar
 
 FILENAME = "guitars.csv"
