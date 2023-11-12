@@ -1,7 +1,10 @@
+"""
+CP1404 Practical - Kivy App using dynamic widgets (labels).
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
-from kivy.properties import StringProperty
 
 
 class DynamicLabelsApp(App):
@@ -13,7 +16,7 @@ class DynamicLabelsApp(App):
         self.names = ["Dylan", "Riley", "Sarah", "Mitchell", "Harry", "Bob"]
 
     def build(self):
-        """Build the Kivy GUI."""
+        """Build the Kivy App."""
         self.title = "Dynamic Labels"
         self.root = Builder.load_file('dynamic_labels.kv')
         for name in self.names:

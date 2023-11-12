@@ -1,3 +1,7 @@
+"""
+CP1404 Practical - Modified box_layout_demo code
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 

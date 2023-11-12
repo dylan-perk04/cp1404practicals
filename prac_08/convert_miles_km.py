@@ -1,3 +1,7 @@
+"""
+CP1404 Practical - Convert miles to kilometres using a Kivy App.
+"""
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
@@ -10,13 +14,13 @@ class MilesToKilometresConverterApp(App):
     output_kilometres = StringProperty()
 
     def build(self):
-        """Build the Kivy app from the kv file"""
+        """Build the Kivy app from the kv file."""
         self.title = "Convert Miles to Kilometres"
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
     def handle_calculate(self, text):
-        """Handle calculation"""
+        """Handle calculation."""
         miles = self.convert_text_to_float(text)
         self.display_kilometres(miles)
 
