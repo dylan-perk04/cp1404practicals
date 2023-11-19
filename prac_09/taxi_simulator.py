@@ -1,3 +1,5 @@
+"""CP1404 Practical - Taxi Simulator Program."""
+
 from prac_09.taxi import Taxi
 from prac_09.silver_service_taxi import SilverServiceTaxi
 
@@ -5,6 +7,7 @@ MENU_PROMPT = "q)uit, c)hoose taxi, d)rive\n>>> "
 
 
 def main():
+    """Program that utilises Taxi and SilverServiceTaxi classes to simulate driving a taxi."""
     taxis = [Taxi("Taxi 1", 50), Taxi("Taxi 2", 100),
              SilverServiceTaxi("Fancy Taxi 1", 120, 2), SilverServiceTaxi("Fancy Taxi 2", 80, 3)]
     current_taxi = None
@@ -16,7 +19,7 @@ def main():
         if menu_choice == "c":
             print("Taxis available:")
             display_taxis(taxis)
-            current_taxi = get_valid_taxi(taxis, current_taxi)
+            current_taxi = get_valid_taxi_number(taxis, current_taxi)
         elif menu_choice == "d":
             if current_taxi:
                 current_taxi.start_fare()
@@ -37,11 +40,13 @@ def main():
 
 
 def display_taxis(taxis):
+    """Display a numbered list of taxis including their details."""
     for i, taxi in enumerate(taxis):
         print(f"{i} - {str(taxi)}")
 
 
-def get_valid_taxi(taxis, current_taxi):
+def get_valid_taxi_number(taxis, current_taxi):
+    """Get a valid taxi number to drive."""
     is_valid_input = False
     while not is_valid_input:
         try:
@@ -51,11 +56,6 @@ def get_valid_taxi(taxis, current_taxi):
         except ValueError:
             print("Input must be an integer")
     return current_taxi
-
-
-def drive(current_taxi):
-    print("You need to choose a taxi before you can drive")
-    current_taxi.drive()
 
 
 main()

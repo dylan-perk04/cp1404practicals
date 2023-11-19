@@ -1,4 +1,5 @@
-"""CP1404 Practical - Band class code"""
+"""CP1404 Practical - Band class code."""
+
 
 class Band:
     """Represent a Band Instance."""
